@@ -1,0 +1,206 @@
+*,
+*::before,
+*::after {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins',sans-serif;
+    background-color: #0C356A;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header.navbar-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    padding: 1rem;
+
+    z-index: 9999;
+}
+header.navbar-container .brand-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFC436;
+}
+
+header.navbar-container .nav-list ul{
+    display: flex;
+    padding-left: 0;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li{
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFF0CE;
+    border-radius: 999px;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    -ms-border-radius: 999px;
+    -o-border-radius: 999px;
+}
+
+header.navbar-container .nav-list li:hover a{
+    color: #FFC436;
+}
+
+header.navbar-container .social-media ul{
+    display: flex;
+    padding-left: 0;
+    gap: 2rem 1rem;
+}
+header.navbar-container .social-media li{
+    list-style-type: none;
+}
+header.navbar-container .social-media li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FFF0CE;
+    border-radius: 999px;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    -ms-border-radius: 999px;
+    -o-border-radius: 999px;
+}
+
+header.navbar-container .social-media li:hover a{
+    color: #FFC436;
+}
+
+main {
+    flex: 1;
+
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 2rem 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+main .content{
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+
+main .content .content-description {
+    flex: 1 1;
+}
+
+main .content .content-description span.welcome {
+    font-size: 1.3rem;
+    color: #FFF0CE;
+}
+main .content .content-description .title {
+    margin-block: 0.5rem;
+    color: #FFC436;
+    /* text-transform: uppercase; */
+
+    font-size: 3.0rem;
+    font-family: 'Coiny','Poppins',sans-serif;
+}
+
+main .content .content-description p {
+    font-size: 1.0rem;
+    color: #FFF0CE;
+
+    line-height: 1.6rem;
+    text-align: justify;
+}
+main .content .content-description .content-download button {
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: #FFF0CE;
+    background-color: #222831;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+main .content .content-description .content-download button:hover {
+    background-color: #FFC436;
+    color: #222831;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+main .content .content-image {
+    flex: 1;
+    display: flex;
+}
+main .content .content-image img{
+    width: 300px;
+    min-width: 100px;
+    margin: auto;
+    background-color: #0174BE;
+    border: 1px solid #222831;
+    border-radius: 777px;
+    -webkit-border-radius: 777px;
+    -moz-border-radius: 777px;
+    -ms-border-radius: 777px;
+    -o-border-radius: 777px;
+}
+
+/* Medium devices (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+    header.navbar-container {
+        flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+
+    main {
+        padding: 1rem 3rem;
+    }
+
+    main .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main .content .content-description .title {
+        font-size: 3rem;
+    }
+    
+    main .content .content-description p {
+        font-size: 1rem;
+    }
+    
+    main .content .content-image {
+        order: -1;
+    }
+    
+}
+
+
